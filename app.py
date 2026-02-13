@@ -1,8 +1,10 @@
 
+import os
+import pickle
 import streamlit as st
 import pandas as pd
-import pickle
 
+st.write("Current Files:", os.listdir())
 model = pickle.load(open("ipl_model.pkl", "rb"))
 model_columns = pickle.load(open("model_columns.pkl", "rb"))
 
